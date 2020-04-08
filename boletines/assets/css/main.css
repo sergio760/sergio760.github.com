@@ -1,0 +1,173 @@
+/*Especificidad
+1. !important
+2.Atributo style
+
+Selectores
+1.Selectores por ID
+2.Selectores de clase, atributos y pseudo clases
+3.Selectores de tipo y pseudo elemento
+*/
+a{
+    text-decoration: none;
+    color: #d5009f;
+}
+a:hover{
+    opacity:0.8 ;
+}
+img{
+    max-width: 100%;
+}
+
+html{
+    font-family: 'Baloo Da 2', cursive;
+}
+.title{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.container{
+    background: #67B26F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4ca2cd, #67B26F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4ca2cd, #67B26F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    max-width: 960px;
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+/*box-shadow: difHorizontal dif Vertical desenfoque amplitud color*/
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    position: relative; 
+    overflow: scroll;
+    
+}
+.content{
+    padding: 1em;
+}
+td{
+    display: block;
+    width: 100%;
+}
+td:nth-of-type(1){
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #d5009f;
+}
+th{
+    display: none;
+}
+.actions{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.close{
+    height: 40px;
+    width: 40px;
+    color: white;
+    border-radius: 60%;
+    background-color: #4ca2cd;
+    display: inline-block;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23); 
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.paragraph{
+    line-height: 1.8em;
+    font-weight: 200;
+}
+.table{
+    width: 100%;
+    border-spacing: 0;
+}
+.table td, .table th{
+padding: 1em;
+text-align: left;
+}
+.table tr:nth-child(even){
+background-color: #9bd5f1 ;
+}
+.fa-pizza-slice{
+    color: #C20114;
+}
+.title-item{
+    /*border-bottom-style: solid;
+    border-width: 2px;
+    border-color: #67B26f;*/
+    font-size: 2em;
+    border-bottom: solid 2px #67B26F;
+    padding-bottom: 1em;
+}
+.position{
+    background-color: #9bd5f1;
+    color: #f70202f3;
+    padding: 0.5em;
+    border-radius: 4px;
+    margin-right: 0.5em;
+}
+.address{
+    font-weight: bold;
+    color: #4ca2cd;
+    font-size: 1.2em;
+    margin-top: 1em;
+    display: inline-block;
+}
+.main-image{
+    float: left;
+    margin-right: 3em;
+    height: 250px;
+}
+
+
+
+/*Unidades de medidas Absolutas
+Pixeles(px)
+Centimetros(cm)
+Milimetros(mm)
+Picas(pc)
+Puntos(pt)
+Unidades de medidas Relativas(no tienen valor definido)
+Porcentajes(%)-Relativos al tamaño del contenedor
+Ems(em)-Relativos al tamaño de la fuente
+(ex) rel al tamaño en alto de la letra x en minuscula de la  fuente que tengamos  en ese momento
+rems(rem)-relativo al tamaño de la tipografia de Todo el documento
+VW(vw)-Cada unidad es 1% del ancho del viewport
+
+
+las mas utiles-absolutas-pixeles y rara vez pulgadas
+en medidas relativas-ems,% y las unidades del viewport
+*/
+
+
+@media(min-width:900px){
+    th{
+        display: table-cell;
+    }
+    td{
+        width: auto;
+        display: table-cell;
+    }
+    td:nth-of-type(1){
+        font-size: 1em;
+    }
+    .content{
+        padding: 1.8em;
+    }
+}
+
+
+@media (min-height:550px){
+    .content{
+        height:500px;
+    }
+
+}
